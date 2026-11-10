@@ -1,0 +1,88 @@
+
+name: Membership Application
+description: Apply to join LocalGhosters.
+title: "[Application] "
+labels: ["pending"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in LocalGhosters!
+
+        Fill this out honestly. This application will be publicly visible, so do not include private information.
+
+  - type: input
+    id: github
+    attributes:
+      label: GitHub username
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: interests
+    attributes:
+      label: Areas of interest
+      multiple: true
+      options:
+        - Web Development
+        - Python
+        - JavaScript / TypeScript
+        - Rust
+        - AI / Machine Learning
+        - Robotics
+        - UI / UX Design
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: skills
+    attributes:
+      label: What are your skills or what are you currently learning?
+      placeholder: Tell us about your experience.
+    validations:
+      required: true
+
+  - type: input
+    id: projects
+    attributes:
+      label: GitHub profile or project links
+      placeholder: https://github.com/username
+    validations:
+      required: false
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why do you want to join LocalGhosters?
+    validations:
+      required: true
+
+  - type: textarea
+    id: contribution
+    attributes:
+      label: What would you like to contribute?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: availability
+    attributes:
+      label: How much time can you contribute?
+      options:
+        - Whenever I am available
+        - A few hours per week
+        - Regularly
+        - Not sure yet
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I understand that my application will be publicly visible.
+          required: true
